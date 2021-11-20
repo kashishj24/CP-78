@@ -1,0 +1,39 @@
+<html>
+   <head>
+       <link rel="stylesheet" href="style.css">
+   </head>
+   <title> Family Book </title>
+   <body>
+       <h1> Family Book </h1>
+       <hr> <hr>
+       <img id="Book_cover" src="family.png">
+       <h3 id="one">1. Family Book</h3>
+       <button type="button" onclick="update();">Next</button>
+
+    <hr>
+    <script>
+     var names=[
+        "2. My father (Mr. Vishal Jain)",
+        "3. My Mother (Mrs. Swati Jain)",
+        "4. My Brother ( Samarth Jain)",
+        "5. Me ( Kashish Jain)"
+      ];
+      var images=[
+        "dad.png",
+        "mom.png",
+        "brother.png",
+        "Me.png"
+      ];
+      var i=0;
+      function update(){
+        document.getElementById("one").innerHTML=names[i];
+        document.getElementById("Book_cover").src=images[i];
+        i++;
+        if(i==4){
+          i=0;
+        }
+        }
+
+      </script>
+   </body>
+</html>
